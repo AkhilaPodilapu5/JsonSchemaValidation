@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "json data",
+  "description": "schema for data (member of data)",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string",
+      "description": "id of the user"
+    },
+    "index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "guid": {
+      "type": "string",
+      "description": "guid of the user",
+      "format": "uuid"
+    },
+    "isActive": {
+      "type": "boolean",
+      "description": "is the user active"
+    },
+    "balance": {
+      "type": "string",
+      "description": "balance of the user"
+    },
+    "picture": {
+      "type": "string",
+      "format": "uri"
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "eyeColor": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "name of the user"
+    },
+    "gender": {
+      "type": "string",
+      "description": "The gender of the user",
+      "enum": ["male", "female"]
+    },
+    "company": {
+      "type": "string",
+      "description": "The name of the company the user works in"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "about": {
+      "type": "string"
+    },
+    "registered": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number",
+      "minimum": -90,
+      "maximum": 90
+    },
+    "longitude": {
+      "type": "number",
+      "minimum": -180,
+      "maximum": 180
+    }
+
+  },
+  "required": ["_id", "index", "guid", "isActive", "balance", "picture", "name", "gender", "company", "email", "phone", "address", "registered"]
+}
